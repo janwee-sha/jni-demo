@@ -1,7 +1,7 @@
-# JNI with C
+# JNI with C++
 
 This is a Java demo project using JNI (Java Native Interface),
-    which invokes native C++ code through Java code and prints "Hello from C using JNI!".
+    which invokes native C++ code through Java code and prints "Hello from C++ using JNI!".
 
 ## How to Compile from source
 
@@ -14,18 +14,18 @@ This is a Java demo project using JNI (Java Native Interface),
 
 Switch to the project's root directory and run the following `javac` command:
 ```bash
-javac -h src/cfile -d out src/java/CCodeCaller.java
+javac -h src/cfile -d out src/java/CPPCodeCaller.java
 ```
 
 ### 2). Compile C native code to generate a local library (on Windows a library is a DLL file):
 ```bash
-gcc -shared -o hello_from_c.dll -I $env:JAVA_HOME/include -I $env:JAVA_HOME/include/win32 src/cfile/Hello.c
+gcc -shared -o hello_from_cpp.dll -I $env:JAVA_HOME/include -I $env:JAVA_HOME/include/win32 src/cfile/Hello.cpp
 ```
 
 ### 3). Package Java Classes to JAR file
 
 ```bash
-jar cfe JNIWithC.jar CCodeCaller -C out .
+jar cfe JNIWithCPP.jar CPPCodeCaller -C out .
 ```
 
 ## How to use
@@ -37,5 +37,5 @@ jar cfe JNIWithC.jar CCodeCaller -C out .
 ### Command to run
 
 ```bash
-java -jar JNIWithC.jar
+java -jar JNIWithCPP.jar
 ``` 

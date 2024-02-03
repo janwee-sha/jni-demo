@@ -4,11 +4,6 @@ This is a Java demo project using JNI (Java Native Interface),
     which invokes native C/C++ code through Java code. 
     Switch to modules for different implementations.
 
-# Requirements
-- Windows 64-Bit system
-- Java Development Kit (Java 8 or higher)
-- C++ compiler (e.g. MinGW-w64(for Windows))
-
 # Install C/C++ compiler
 
 ## Install C/C++ compiler on Windows
