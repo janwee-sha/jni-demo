@@ -17,7 +17,7 @@ Switch to the project's root directory and run the following `javac` command:
 javac -h src/cfile -d out src/java/CPPCodeCaller.java
 ```
 
-### 2). Compile C native code to generate a local library (on Windows a library is a DLL file):
+### 2). Compile C++ native code to generate a local library (on Windows a library is a DLL file):
 ```bash
 g++ -shared -o hello_from_cpp.dll -I $env:JAVA_HOME/include -I $env:JAVA_HOME/include/win32 src/cfile/Hello.cpp
 ```
