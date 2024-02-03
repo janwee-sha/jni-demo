@@ -19,7 +19,7 @@ javac -h src/cfile -d out src/java/CPPCodeCaller.java
 
 ### 2). Compile C native code to generate a local library (on Windows a library is a DLL file):
 ```bash
-gcc -shared -o hello_from_cpp.dll -I $env:JAVA_HOME/include -I $env:JAVA_HOME/include/win32 src/cfile/Hello.cpp
+g++ -shared -o hello_from_cpp.dll -I $env:JAVA_HOME/include -I $env:JAVA_HOME/include/win32 src/cfile/Hello.cpp
 ```
 
 ### 3). Package Java Classes to JAR file
